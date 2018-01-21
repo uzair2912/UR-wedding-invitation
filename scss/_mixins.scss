@@ -1,0 +1,102 @@
+
+// Venue Background Image Mixin
+
+@mixin venueBackImage($image, $height, $opacity: 1) {
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url($image);
+    height: $height;
+    opacity: $opacity;
+    display: table;
+}
+
+// General properties for background images
+@mixin backImageProperty() {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+//general properties for the fonts
+@mixin font($font-family, $color, $size, $letter-spacing: auto, $align: center) {
+    font-family: $font-family;
+    font-size: $size;
+    letter-spacing: $letter-spacing;
+    color: $color;
+    text-align: $align;
+}
+
+
+// Weeding venue section 
+
+@mixin venue($size, $top, $left, $padding, $border-radius:5px) {
+    
+    top: $top;
+    left: $left;
+    padding: $padding;
+    border-radius: $border-radius;
+    font-size: $size;
+    background: black;
+    display: block;
+    position: absolute;
+    color: floralwhite;
+    
+}
+
+// general design mixin for sub-main class on front page
+
+@mixin design($width) {
+    content: "";
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: $width;
+    border-bottom: 1px solid #fff;
+}
+
+//mixin for invitation message section
+
+@mixin aboutHeading($padding,$size){
+    display: block;
+    padding: $padding;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/aboutUs.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: $size;
+        text-transform: uppercase;
+    }
+}
+
+// Message font and line height mixin
+@mixin msg($line-height, $sizep, $sizeb, $sizei) {
+    
+        line-height: $line-height;
+        .grandparent,
+        p { font-size: $sizep; }
+        b { font-size: $sizeb; }
+        i { font-size: $sizei; }
+    
+}
+
+// about text mixin
+
+@mixin abouttext($margintop, $size, $lineHeight){
+    margin-top: $margintop;
+    display: block;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: $size;
+    line-height: $lineHeight;
+    overflow: hidden;
+    word-wrap: normal;
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans");
+.frontText {
+  width: 100%;
+  height: 100vh;
+  display: table;
+  text-align: center;
+  padding: 2em;
+}
+
+.frontText .main {
+  font-family: "Merriweather Sans", sans-serif;
+  letter-spacing: 2px;
+  font-size: 4em;
+  vertical-align: middle;
+}
+
+.Navigation {
+  width: 100%;
+  height: 50px;
+  background-color: lightcyan;
+  display: table;
+}
+
+.Navigation .nav {
+  width: 100%;
+  height: 100%;
+}
+
+.Navigation a {
+  width: 33%;
+  display: inline-table;
+  text-align: center;
+  padding: 18px 0;
+  color: darkslategray;
+  text-decoration: none;
+}
+
+.Navigation a:hover {
+  background: 20px 20px rgba(128, 128, 128, 0.308);
+  color: black;
+}
+
+#footer {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: table;
+  text-align: center;
+  font-size: 18px;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+a.contact {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a.contact:hover {
+  color: green;
+}
+
+
+/*# sourceMappingURL=style.css.map */

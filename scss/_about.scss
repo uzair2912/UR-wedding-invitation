@@ -1,0 +1,44 @@
+
+// ----------- about section
+
+.aboutSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .about {
+
+        @media screen and (min-width: $desktop) {
+            @include aboutHeading(6em, 3em);
+        }
+        @media screen and (max-width: $landscape) {
+            @include aboutHeading(4.5em, 2.5em);
+        }
+        @media screen and (max-width: $mobileL) {
+            @include aboutHeading(3em, 2em);
+        }
+        @media screen and (max-width: $mobileS) {
+            @include aboutHeading(2.5em, 1.5em);
+        }
+        
+    
+
+    .aboutText {
+
+        @media screen and (min-width: $desktop) {
+            @include abouttext(2.5em, 1.2em, 1.5em);
+        }
+        @media screen and (max-width: $landscape) {
+            @include abouttext(2.5em, 1.2em, 1.5em);
+        }
+        @media screen and (max-width: $mobileL) {
+            @include abouttext(2em, 1em, 1.2em);
+        }
+        @media screen and (max-width: $mobileS) {
+            @include abouttext(1.7em, 0.8em, 1em);
+        }
+    }
+
+    }
+
+}

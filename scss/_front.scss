@@ -1,0 +1,89 @@
+
+// -------------- front page
+@import 'variables';
+
+.frontPage {
+    position: relative;
+    display: table;
+    height: 100vh;
+    text-align: center;
+    background-image:  linear-gradient(to bottom,rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('../images/frontBackground.jpg');
+    @include backImageProperty();
+
+    .frontText {
+        display: table-cell;
+        vertical-align: middle;
+                
+        .main {
+
+            @media screen and (min-width: $desktop) {
+                @include font($front-main, floralwhite, 8em, 10px );
+            }
+            @media screen and (max-width: $landscape) {
+                @include font($front-main, floralwhite, 6em, 7px );
+            }
+            @media screen and (max-width: $mobileL) {
+                @include font($front-main, floralwhite, 5em, 8px );
+            }
+            
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 2s;
+            //-vendor-animation-iteration-count: infinite;
+        }
+    }
+
+   .sub-main {
+    
+        @media screen and (min-width: $desktop) {
+            @include font($front-sub, floralwhite, 1.5em);
+            &:before,
+            &:after {
+                @include design(20%);
+            }
+        }
+        @media screen and (max-width: $landscape) {
+            @include font($front-main, floralwhite, 1.5em);
+            &:before,
+            &:after {
+                @include design(20%);
+            }
+        }
+        @media screen and (max-width: $mobileL) {
+            @include font($front-main, floralwhite, 1.5em );
+            &:before,
+            &:after {
+                @include design(40%);
+            }
+        }
+        
+    }
+
+   .sub-date {
+        
+        @media screen and (min-width: $desktop) {
+            @include font($front-main, floralwhite, 2em, 5px)
+        } 
+        @media screen and (max-width: $landscape) {
+            @include font($front-main, floralwhite, 1.5em, 4px )
+        }
+        @media screen and (max-width: $mobileL) {
+            @include font($front-main, floralwhite, 1.5em, 4px )
+        }
+
+    }
+
+}
+
+.em::before,
+.em::after {
+    content: "§";
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0.8;
+    margin: 0 0.6em;
+    font-size: 0.5em;
+}

@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'front';
+@import 'about';
+@import 'weddingDetails';
+@import 'invitationMsg';
+@import 'footer';
+@import 'nav';
+
+
+
+// --------global style
+html,
+body,
+section,
+div,
+p,
+h2,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+

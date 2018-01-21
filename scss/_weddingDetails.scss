@@ -1,0 +1,169 @@
+
+@import 'variables';
+
+// Weeding Venue Section 
+
+.weddingVenue {
+    @include venueBackImage('../images/weedingVenue.jpg', 500px, 0.8);
+    @include backImageProperty();
+    position: relative;
+    
+    @media screen and (min-width: $desktop){
+        .venue {
+            @include venue(4em, 40%, 50%, 15px);
+        }
+    }
+    @media screen and (max-width: $landscape) {
+        .venue {
+            @include venue(2.8em, 40%, 50%, 15px);
+        }
+    }
+    @media screen and (max-width: $mobileL) {
+        .venue {
+            @include venue(2.5em, 40%, 25%, 15px);
+        }
+    }
+
+    @media screen and (max-width: $mobileS) {
+        .venue {
+            @include venue(2em, 40%, 18%, 15px);
+        }
+    }
+
+    
+
+}
+
+
+//  Weeding Details Section
+
+//Default
+.weddingDetailSection {
+    width: 100%;
+    height: auto;
+    background-color:rgb(139, 0, 0);
+}
+
+.weddingDetails h1 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2em;
+    color: sandybrown;
+}
+
+.detail {
+    display: flex;
+    color:#EEE8AA;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+em {
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    font-style: normal;
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    &::before,
+    &::after {
+        content: "§";
+        display: inline-block;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        opacity: 0.8;
+        margin: 0 0.6em;
+        font-size: 0.5em;
+    }
+}
+
+// For diferent screen sizes
+// for the desktop, laptops
+@media screen and (min-width: $desktop) {
+    .details {
+        padding: 50px;
+    }
+    .detail {
+        padding: 45px;
+    }
+    .event, .place {
+        padding: 20px;
+    }
+    .event {
+        display: table-cell;
+        width: 50%;
+        text-align: center;
+        border-right: 1px dashed lightgray;
+        justify-content: space-between;
+    }
+    .place {
+        display: table-cell;
+        width: 50%;
+        text-align: center;
+        justify-content: space-between;
+    }
+}
+
+// for the tablets, ipads, landscape
+@media screen and (max-width: $landscape) {
+    
+    .details {
+        padding: 45px;
+    }
+
+    .detail {
+        padding: 40px;
+    }
+
+   .event,
+   .place {
+       padding: 15px;
+   }
+   .event {
+       display: table-cell;
+       width: 50%;
+       text-align: center;
+       border-right: 1px dashed lightgray;
+   }
+   .place {
+       display: table-cell;
+       width: 50%;
+       text-align: center;
+   }
+}
+
+// For the mobile devices
+@media screen and (max-width: $mobileL) {
+
+    .weddingDetails h1 {
+        font-size: 1.4em;
+    }
+
+    .details {
+        padding: 35px;
+    }
+    .detail {
+        display: block;
+        padding: 5px;  
+    }
+    
+    .event, .place {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        margin: 3em 0px;
+        padding: 0;
+    }
+}
+
+
+
+

@@ -1,0 +1,48 @@
+
+
+.invitationMsg {
+    width: 100%;
+    height: auto;
+
+    .invite {
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('../images/invitation.jpg');
+        background-position: bottom;
+        background-attachment: fixed;
+        display: table;
+
+        @media screen and (min-width:$desktop) {
+            padding: 4em;
+        }
+        @media screen and (max-width:$landscape) {
+            padding: 2em;
+        }
+    }
+    
+
+    .msg {
+
+        display: table-cell;
+        // background: rgba(233, 150, 122, 0.74);
+        color: white;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+        border-radius: 1em;
+        padding: 25px;
+
+        @media screen and (min-width: $desktop) {
+            @include msg(2.5em, 25px, 40px, 30px);
+        }
+        @media screen and (max-width: $landscape) {
+            @include msg(2em, 20px, 35px, 22px);
+        }
+        @media screen and (max-width: $mobileL) {
+            @include msg(2em, 18px, 30px, 20px);
+        }
+            
+
+    }
+}

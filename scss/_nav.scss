@@ -1,0 +1,81 @@
+
+
+// --------------Navigation 
+$navbar-background: rgba(255, 255, 255, 0.774);
+$navText: darkslategray;
+
+// dot navigation
+
+/* SIDEBAR NAVIGATION */
+
+.sidebar {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    z-index: 999;
+    content: "";
+    color: transparent;
+    font-size: 14px;
+    line-height: 10px;
+    vertical-align: middle;
+    margin: 5px 0 5px 0;
+    font-weight: 300;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    & .dotspan {
+        display: block;
+        position: relative;
+        left: -120px;
+        width: max-content;
+    }
+    & span {
+        margin: 0px 0px 20px 15px;
+        position: relative;
+        top: 0px;
+        left: -80px;
+    }
+}
+
+nav {
+    width: 100px;
+    height: auto;
+    padding: 0 0px;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    z-index: 10000;
+    text-align: right;
+
+    & ul li a {
+        text-decoration: none;
+    }
+
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+.name-active {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #ffd95f;
+    text-align: right;
+}
